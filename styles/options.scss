@@ -1,12 +1,63 @@
 @import 'common.scss';
 
-.container {
-  min-height: 100vh;
-
+.but-wrapper {
   display: flex;
-
-  flex-direction: column;
-
   align-items: center;
-  justify-content: center;
+}
+
+.but-img {
+  width: 30px;
+  margin: 0;
+}
+
+.donate-img {
+  margin-top: 5px;
+}
+
+.translate-img {
+  margin-top: 1px;
+}
+
+.but-text {
+  padding: 0;
+  margin: 0;
+  color: #040404;
+  font-size: 16px;
+}
+
+.but-donate {
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    background-color: #ccc;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.translate-contaeiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 132px;
+  height: 26px;
+  border-radius: 8px;
+  border: 1px solid #A7A5A5;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999999;
+}
+
+.canvas {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
 }

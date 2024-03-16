@@ -10,10 +10,47 @@
 
 <body>
   <div class="container">
-    <h1>Options page</h1>
+    <h1>Os page</h1>
     
     <p>Edit <u>static/options.html</u> to change this page!</p>
   </div>
+
+  <div role="textbox" contenteditable="true">Нажмите здесь, чтобы ввести текст</div>
+
+
+  <input type="text"/>
+  <textarea></textarea>
+  <div
+  role="textbox"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel"></div>
+
+  <style scoped>
+    #example-one {
+        margin: 12px 0;
+    }
+    #example-one[contenteditable="true"] {
+        padding: 10px;
+        outline: 3px dashed #CCC;
+    }
+    #example-one[contenteditable="true"]:hover {
+        outline: 3px dashed #2B8BAD;
+    }
+</style>
+  <div id="example-one" contenteditable="true"> 
+    <p><span>Привет, как ты себя чувтвуешь?</span></p>
+</div>
+
+<div id="example-one" contenteditable="true">
+    
+ 
+</div>
+
+<div class="g">
+ 
+</div>
+
   
   <script src="options.js"></script>
 </body>

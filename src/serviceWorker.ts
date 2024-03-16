@@ -1,18 +1,33 @@
-import { initializeStorageWithDefaults } from './storage';
+import { translate } from '@vitalets/google-translate-api';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 
-chrome.runtime.onInstalled.addListener(async () => {
-  // Here goes everything you want to execute after extension initialization
+const agentOption: any = {
+  protocol: 'https:',
+  host: '38.170.100.64',
+  port: '8000',
+  auth: 'AtcrR1:77VQNj',
+  timeout: 1000
+};
 
-  await initializeStorageWithDefaults({});
+// const agent = new HttpsProxyAgent(agentOption);
 
-  console.log('Extension successfully installed!');
-});
-
-// Log storage changes, might be safely removed
-chrome.storage.onChanged.addListener((changes) => {
-  for (const [key, value] of Object.entries(changes)) {
-    console.log(
-      `"${key}" changed from "${value.oldValue}" to "${value.newValue}"`,
-    );
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.translateText) {
+    translate(message.translateText, { 
+      to: message.language, 
+    })
+    .then(data => {
+      console.log(data.text)
+      sendResponse(data.text)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
+
+  if (message.consoleText) {
+    console.log(message.consoleText)
+  }
+
+  return true;
 });

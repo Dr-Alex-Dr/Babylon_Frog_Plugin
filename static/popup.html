@@ -6,17 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles/popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <div class="container">
-    <h1>Hello World!</h1>
-
-    <p>Edit <u>static/popup.html</u> to change this page!</p>
-
-    <button id="go-to-options" class="button" style="margin-top: 2rem;">Open options page</button>
-  </div>
-
+  <section class="popup">
+    <div class="container">
+      <div class="header">
+        <img class="header-logo" src="./images/frog.png" alt="">
+        <h1 class="header-title">Babylon Frog</h1>
+      </div>
+      <ul class="popup-list">
+        <li class="popup-list-item">
+          <p class="list-item__text">Наберите любой текст (пост или комментарий) на родном языке, когда вы находитесь на иностранном сайте.</p>
+        </li>
+        <li class="popup-list-item">
+          <p class="list-item__text">Выделите набранный текст.</p>
+        </li>
+        <li class="popup-list-item">
+          <p class="list-item__text">Нажмите появившуюся выше текста кнопку “Translate”.</p>
+        </li>
+        <li class="popup-list-item">
+          <p class="list-item__text">Расширение заменит текст переводом на язык страницы.</p>
+        </li>
+      </ul>
+      <div class="buttons">
+        <a class="button buttons-shrome" href="#">Chrome Store</a>
+        <a class="button buttons-donate" href="#">Donate</a>
+      </div>
+    </div>
+  </section>
   <script src="popup.js"></script>
 </body>
 </html>

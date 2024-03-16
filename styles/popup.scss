@@ -1,15 +1,71 @@
 @import 'common.scss';
 
+.popup {
+  width: 511px;
+  border: 1px solid #6D6C6C;
+  border-radius: 2px;
+}
+
 .container {
-  min-height: 200px;
-  min-width: 300px;
-
-  padding: 2rem;
-
+  padding: 20px;
   display: flex;
-
   flex-direction: column;
+  justify-content: space-between;
+}
 
+.header {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+
+  &-title {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+}
+.popup-list {
+  padding-left: 20px;
+}
+
+.popup-list-item {
+ 
+}
+
+.list-item__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.button {
+  border-radius: 5px;
+  border: 1px solid #5F5D5D;
+  width: 220px;
+  height: 42px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.buttons-shrome {
+  background-color: #FF0728;
+  opacity: 0.8;
+}
+
+.buttons-donate {
+  opacity: 0.7;
+  background-color: #2250E5;
 }

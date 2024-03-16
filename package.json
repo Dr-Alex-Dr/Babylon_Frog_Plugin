@@ -45,7 +45,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.6",
-    "normalize.css": "^8.0.1"
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.4",
+    "normalize.css": "^8.0.1",
+    "rxjs": "^7.8.1"
   },
   "browserslist": "> 0.25%, not dead",
   "husky": {
